@@ -8,6 +8,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <nav>
+      <button data-kategori="alle" class="valgt">Alle</button>
+      <button data-kategori="forretter">Foretter</button>
+      <button data-kategori="hovedretter">Hovedretter</button>
+      <button data-kategori="desserter">Desserter</button>
+      <button data-kategori="drikkevarer">Drikkevarer</button>
+    </nav>
+
+    <main id="holder"></main>
+    <template>
+      <article>
+        <img class="picture" src="" alt="" />
+        <h2 class="name"></h2>
+        <p class="short-description"></p>
+        <p class="price"></p>
+      </article>
+    </template>
+
     <script src="script.js"></script>
   </body>
 </html>
