@@ -9,11 +9,12 @@
   </head>
   <body>
     <nav>
-      <button data-kategori="alle" class="valgt">Alle</button>
+      <button data-kategori="alle" class="chosen">Alle</button>
       <button data-kategori="forretter">Foretter</button>
       <button data-kategori="hovedretter">Hovedretter</button>
       <button data-kategori="desserter">Desserter</button>
       <button data-kategori="drikkevarer">Drikkevarer</button>
+      <button data-kategori="sideorders">Sideorders</button>
     </nav>
 
     <main id="holder"></main>
@@ -25,6 +26,13 @@
         <p class="price"></p>
       </article>
     </template>
+
+    <div id="popup">
+      <article>
+        <h2></h2>
+        <p></p>
+      </article>
+    </div>
 
     <script src="script.js"></script>
   </body>

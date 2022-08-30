@@ -1,3 +1,20 @@
-.valgt {
+.chosen {
   color: red;
+}
+#popup {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #000000aa;
+  display: flex;
+  justify-content: center;
+  display: none;
+  overflow: scroll;
+}
+
+#popup article {
+  width: 80%;
+  background-color: white;
 }

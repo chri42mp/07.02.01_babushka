@@ -6,9 +6,9 @@ filterBtn.forEach((button) => button.addEventListener("click", filterMenu));
 
 function filterMenu() {
   filter = this.dataset.kategori;
-  document.querySelector(".valgt").classList.remove("valgt");
-  this.classList.add("valgt");
-  vis();
+  document.querySelector(".chosen").classList.remove("chosen");
+  this.classList.add("chosen");
+  show();
 }
 
 const endpoint = "https://babushka-dd8a.restdb.io/rest/menu";
@@ -22,10 +22,10 @@ async function getData() {
   const response = await fetch(endpoint, moreinfo);
   menu = await response.json();
   console.log(menu);
-  vis();
+  show();
 }
 
-function vis() {
+function show() {
   console.log(menu);
   const holder = document.querySelector("#holder");
   const template = document.querySelector("template").content;
@@ -33,14 +33,26 @@ function vis() {
   menu.forEach((course) => {
     if (filter === course.kategori || filter === "alle") {
       const clone = template.cloneNode(true);
+      clone
+        .querySelector("article")
+        .addEventListener("click", () => showCourse(course));
       clone.querySelector("img").src =
         "pictures/" + course.billednavn + "-md.jpg";
       clone.querySelector(".short-description").textContent =
         course.kortbeskrivelse;
       clone.querySelector(".name").textContent = course.billednavn;
-      clone.querySelector(".price").textContent = course.pris;
+      clone.querySelector(".price").textContent = course.pris + ".-";
       holder.appendChild(clone);
     }
   });
 }
+
+function showCourse(courseData) {
+  console.log("courseData");
+  const popup = document.querySelector("#popup");
+  popup.style.display = "flex";
+  popup.querySelector("h2").textContent = courseData.navn + "";
+  popup.addEventListener("click", () => (popup.style.display = "none"));
+}
+
 getData();
