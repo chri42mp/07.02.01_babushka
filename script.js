@@ -40,7 +40,7 @@ function show() {
         "pictures/" + course.billednavn + "-md.jpg";
       clone.querySelector(".short-description").textContent =
         course.kortbeskrivelse;
-      clone.querySelector(".name").textContent = course.billednavn;
+      clone.querySelector(".name").textContent = course.navn;
       clone.querySelector(".price").textContent = course.pris + ".-";
       holder.appendChild(clone);
     }
@@ -51,7 +51,13 @@ function showCourse(courseData) {
   console.log("courseData");
   const popup = document.querySelector("#popup");
   popup.style.display = "flex";
-  popup.querySelector("h2").textContent = courseData.navn + "";
+  popup.querySelector("h2").textContent = courseData.navn;
+  popup.querySelector("img").src =
+    "pictures/" + courseData.billednavn + "-md.jpg";
+  popup.querySelector(".long-description").textContent =
+    courseData.langbeskrivelse;
+  popup.querySelector(".from").textContent = courseData.oprindelsesregion;
+  popup.querySelector(".price").textContent = courseData.pris + ".-";
   popup.addEventListener("click", () => (popup.style.display = "none"));
 }
 

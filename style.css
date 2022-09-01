@@ -1,6 +1,20 @@
+* {
+  padding: 0;
+}
+img {
+  max-width: 100%;
+  border-radius: 25px;
+}
+
 .chosen {
   color: red;
 }
+#holder {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+}
+
 #popup {
   position: fixed;
   width: 100vw;
@@ -16,5 +30,71 @@
 
 #popup article {
   width: 80%;
-  background-color: white;
+  background-color: rgb(255, 249, 241);
+  max-width: 50%;
+}
+article {
+  border: solid black 1px;
+  background-color: rgb(255, 249, 241);
+  border-radius: 25px;
+}
+header {
+  font-family: "Gochi Hand", cursive;
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 249, 241);
+}
+
+.logo {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  display: flex;
+  cursor: pointer;
+  border: 0;
+  background: 0;
+  font-family: "Gochi Hand", cursive;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+h2 {
+  padding-left: 6px;
+}
+p {
+  padding-left: 6px;
+  max-width: 75ch;
+}
+
+@media only screen and (max-width: 850px) {
+  #holder {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+
+  header {
+    font-family: "Gochi Hand", cursive;
+    font-size: 1.6rem;
+  }
+  .logo {
+    width: 100px;
+    display: flex;
+  }
+  button {
+    font-family: "Gochi Hand", cursive;
+    font-size: 1.1rem;
+  }
 }
