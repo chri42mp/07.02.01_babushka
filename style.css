@@ -29,9 +29,8 @@ img {
 }
 
 #popup article {
-  width: 80%;
+  width: 40%;
   background-color: rgb(255, 249, 241);
-  max-width: 50%;
 }
 article {
   border: solid black 1px;
@@ -43,6 +42,7 @@ header {
   font-size: 2.5rem;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: rgb(255, 249, 241);
 }
 
@@ -52,10 +52,10 @@ header {
   justify-content: center;
 }
 .container {
-  margin: 0 auto;
   max-width: 1200px;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  margin: 0 auto;
 }
 nav {
   display: flex;
@@ -68,14 +68,17 @@ button {
   background: 0;
   font-family: "Gochi Hand", cursive;
   font-size: 2rem;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 h2 {
-  padding-left: 6px;
+  padding-left: 1rem;
+  font-size: 2rem;
 }
 p {
-  padding-left: 6px;
+  padding-left: 1rem;
   max-width: 75ch;
+  font-size: 1.2rem;
+  line-height: 2rem;
 }
 
 @media only screen and (max-width: 850px) {
@@ -96,5 +99,9 @@ p {
   button {
     font-family: "Gochi Hand", cursive;
     font-size: 1.1rem;
+  }
+  #popup article {
+    width: 80%;
+    background-color: rgb(255, 249, 241);
   }
 }
