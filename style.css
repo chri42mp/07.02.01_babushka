@@ -69,19 +69,22 @@ button {
   font-family: "Gochi Hand", cursive;
   font-size: 2rem;
   padding-bottom: 2rem;
+  color: black;
 }
 h2 {
   padding-left: 1rem;
   font-size: 2rem;
+  color: black;
 }
 p {
   padding-left: 1rem;
   max-width: 75ch;
   font-size: 1.2rem;
   line-height: 2rem;
+  color: black;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 800px) {
   #holder {
     display: grid;
     grid-template-columns: 1fr;
@@ -90,15 +93,16 @@ p {
 
   header {
     font-family: "Gochi Hand", cursive;
-    font-size: 1.6rem;
+    font-size: 1rem;
   }
   .logo {
-    width: 100px;
+    width: 80px;
     display: flex;
   }
   button {
     font-family: "Gochi Hand", cursive;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    color: black;
   }
   #popup article {
     width: 80%;
